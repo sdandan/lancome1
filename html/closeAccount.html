@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车第二步()</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="/libs/requirejs/require.js" data-main="/js/OrderSettlement"></script>
+</head>
+<body>
+
+    <div class="lancome">
+        <img src="https://res.lancome.com.cn/build/images/logo@2x.png" alt="">
+    </div>
+
+<section>
+    <article>
+        <div class="shopping-cart-details">
+            <div class="shopping-bag clearfix">
+               <div class="receiving-information">
+                   <div class="information">
+                       <span>填写收货信息</span>
+                   </div>
+                   <div class="delivery-address clearfix">
+                      <laber>
+                          <input type="radio" name="" checked="checked" class="check-name">
+                      </laber>
+                       <span class="name js-name">温柔养猫人</span>
+                       <span class="site js-site">四川省成都市武侯区力宝大厦</span>
+                       <span class="postcode js-postcode1">121254</span>
+                       <span class="tel js-tel">15101118520</span>
+                       <span class="compile">编辑></span>
+                       <span class="delete">删除></span>
+                   </div>
+               </div>
+                <div class="the-new-address">
+                    <div class="clearfix">
+                        <laber for="newAddress">
+                            <input type="radio" name=""  id="newAddress" checked="" class="check-name js-new-address">
+                            <span>使用新地址</span>
+                        </laber>
+                        <span class="must"><i class="cor">*</i> 为必须</span>
+                    </div>
+                    <div class="js-newAddress hidden">
+                     <div class="new-address-box">
+                         <div class="new-address-left">
+                             <div>
+                                 <p>姓名 <span class="cor">*</span></p>
+                                 <p><input type="text" class="js-userName"></p>
+                             </div>
+                             <div>
+                                 <p>省份城市地区 <span class="cor">*</span></p>
+                                 <p><input type="text" class="js-city"></p>
+                             </div>
+                             <div>
+                                 <p>详细地址 <span class="cor">*</span></p>
+                                 <p><input type="text" class="js-detailAddress"></p>
+                             </div>
+
+                         </div>
+                         <div class="new-address-left">
+                             <div>
+                                 <p>您的手机 <span class="cor">*</span></p>
+                                 <p><input type="text" class="js-tellNumber"></p>
+                             </div>
+                             <div>
+                                 <p>固定电话（电话格式：021-xxxxxxx)</p>
+                                 <p><input type="text" class="js-phoneNumber"></p>
+                             </div>
+                             <div>
+                                 <p>邮编 <span class="cor">*</span></p>
+                                 <p><input type="text" class="js-postcode"></p>
+                             </div>
+
+                         </div>
+                     </div>
+
+                      <div class="address-btn-box">
+                          <button class="js-saveAddressBtn">保存</button>
+                          <button class="js-cancel">取消</button>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="payment">
+                    <div class="information">
+                        <span>选择支付方式及发票与留言</span>
+                    </div>
+                    <div class="payment-kind">
+                       <ul class="clearfix">
+                           <li>
+                           <label for="zhifubao">
+                               <input type="radio" name="payment" id="zhifubao" checked="checked" class="payment-check">
+                               <img src="/images/payment1.png" alt="">
+                           </label>
+
+                           <li>
+                               <label for="weixin">
+                                   <input type="radio" name="payment"  id="weixin" class="payment-check">
+                                   <img src="/images/payment2.png" alt="" >
+                               </label>
+                           </li>
+                           <li>
+                               <label for="yinlian">
+                                   <input type="radio" name="payment" id="yinlian" class="payment-check">
+                                   <img src="/images/payment3.png" alt="" >
+                               </label>
+                           </li>
+                           <li>
+                               <label for="fukuan">
+                                   <input type="radio" name="payment" id="fukuan" class="fukuan">
+                                   <span >货到付款</span>
+                               </label>
+                           </li>
+                       </ul>
+                        <div class="invoice">
+                            <div class="invoice-tittle active-invoice">
+                                <label for="invoice">
+                                    <i id="invoice"></i>
+                                    <span>发票信息</span>
+                                </label>
+                                <!-- 发票类型-->
+                                <div class="js-personage-and-company hidden">
+                                <div class="personage-and-company clearfix">
+                                    <div>
+                                        <p>发票类型 <span class="cor">*</span></p>
+                                        <select name="" id="">
+                                            <option value="个人">个人</option>
+                                            <option value="企业">企业</option>
+                                        </select>
+                                    </div>
+                                    <div class="hidden">
+                                        <p>公司名称 <span class="cor">*</span></p>
+                                        <input type="text" placeholder="请输入公司名称">
+                                        <p>纳税人识别号 <span class="cor">*</span></p>
+                                        <input type="text" placeholder="请输入纳税人识别号">
+                                    </div>
+
+                                </div>
+                                    <button class="Save-invoice">保存</button>
+                            </div>
+                               <!-- ====== 保存发票信息========-->
+                                <div class="invoice-content clearfix hidden">
+                                    <span>个人</span>
+                                    <span>修改></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="leave-message-box">
+                            <div class="invoice-tittle active-invoice">
+                                <label for="leaveMessage">
+                                    <i id="leaveMessage"></i>
+                                    <span>给我们留言</span>
+                                </label>
+                            </div>
+                            <div class="your-meg js-your-meg hidden">
+                                <p>你的信息 <span class="cor">*</span></p>
+                                <textarea name=""  placeholder="请输入你的留言" id="" cols="30" rows="10"></textarea>
+                                <br>
+                                 <button class="Save-invoice">保存</button>
+                            </div>
+
+                            <!-- ====== 保存发票信息========-->
+                            <div class="message-board clearfix hidden">
+                                <span>快点发货哦</span>
+                                <span>修改></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="order clearfix">
+                    <div class="information information1">
+                        <span>订单总结</span>
+                    </div>
+                    <p>
+                        <span>商品价格</span>
+                        <span>￥3460</span>
+                    </p>
+                    <p>
+                        <span>优惠价格</span>
+                        <span>￥0</span>
+                    </p>
+                    <p>
+                        <span>运费</span>
+                        <span>￥0</span>
+                    </p>
+                    <p class="total">
+                        <span>总价</span>
+                        <span>￥3460</span>
+                    </p>
+                </div>
+                 <button class="immediate">立即结算</button>
+            </div>
+
+            <div class="order-summary">
+                <div class="order-summary-box">
+                    <h3>订单总结</h3>
+                    <button>立即结算</button>
+                    <div class="cart-price">
+                        <p class="clearfix">
+                            商品价格
+                            <span>￥3460 </span>
+                        </p>
+                        <p class="clearfix">
+                            优惠金额
+                            <span>￥0 </span>
+                        </p>
+                        <p class="clearfix">
+                            运费
+                            <span>￥0 </span>
+                        </p>
+                        <p class="clearfix">
+                            总价
+                            <span>￥3460</span>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="call-center">
+                    <h3>客服中心</h3>
+                    <p>如有任何问题，请联系我们</p>
+                    <p>400-820-8016</p>
+                    <button>在线客服</button>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+<footer></footer>
+</body>
+</html>

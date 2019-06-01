@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="libs/swiper/css/swiper.css">
+    <script src="/libs/requirejs/require.js" data-main="/js/index"></script>
+</head>
+<body>
+   <div class="wrap">
+        <header></header>
+<section class="content-box">
+    <article class="banner js-banner">
+        <ul class="banner-img js-banner-img">
+           <li><a href=""><img src="images/banner/banner1.jpg" alt=""></a></li>
+           <li class="hidden"><a href=""><img src="images/banner/banner2.jpg" alt=""></a></li>
+           <li class="hidden"><a href=""><img src="images/banner/banner3.jpg" alt=""></a></li>
+           <li class="hidden"><a href=""><img src="images/banner/banner4.jpg" alt=""></a></li>
+        </ul>
+        <div class="banner-active">
+         <ul class="clearfix js-banner-tittle">
+           <li class="is-active"><span>520表白季</span></li>
+           <li><span>全新大眼睛精华</span></li>
+           <li><span>【菁纯小姐】唇膏全新上市</span></li>
+           <li><span>会员兑礼中心</span></li>
+         </ul>
+        </div>
+    </article>
+
+    <article class="content-box">
+         <div class="content-tittle">
+             <ul class="clearfix js-pinkLove">
+                 <li><h3 class="is-tittle-active">520粉恋单品</h3></li>
+                 <li><h3>520 CP套装</h3></li>
+                 <li><h3>520粉色彩香</h3></li>
+             </ul>
+         </div>
+        <!-- 商品内容-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper js-prod-list">
+                <!-- 商品渲染模板-->
+                <script type="text/html" id="list-template">
+                    {{each products prod}}
+                <div class="swiper-slide">
+                        <div class="thumbnail js-swiper-slide">
+                            <div class="purchase-details hidden js-purchase-details">
+                                <div class="purchase-details-box">
+                                    <button class="js-buyNow" id="{{prod.id}}">立即购买</button>
+                                    <button>了解详情</button>
+                                </div>
+                            </div>
+                            <a href="" >
+                                <img src="{{prod.image}}" class="" alt="显瘦套装">
+                            </a>
+                            <div class="thumbnail-details" >
+                                  <h3>套装</h3>
+                                  <h3>{{prod.title}}</h3>
+                                  <h3>10元劵</h3>
+                                   <div class="price">
+                                       <img src="images/wujiaoxing.jpg" alt="">
+                                       <span>￥{{prod.price}}</span>
+                                   </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </script>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </article>
+
+    <article>
+      <div class="show-love">
+          <a href=""><img src="images/520.jpg" alt=""></a>
+      </div>
+        <div class="special-services">
+              <h2>官网特别服务</h2>
+              <p>SPECIAL SERVICES</p>
+            <div class="services-kind-box">
+                <div class="services-kind">
+                     <div>
+                         <a href="">
+                         <img src="images/services-kind1.jpg" alt="">
+                         <p class="tittle1">新客首购福利</p>
+                         <p class="tittle2">首次购买满520元，即享星品体验礼</p>
+                             <button type="text" class="bye-btn">立即购买</button>
+                         </a>
+                     </div>
+                     <div>
+                         <a href="">
+                             <img src="images/services-kind2.jpg" alt="">
+                             <p class="tittle1">春日尝鲜福利</p>
+                             <p class="tittle2">全场任购正品即赠5片明星体验装（任选5件）</p>
+                             <button type="text" class="bye-btn">即刻尝鲜</button>
+                         </a>
+                     </div>
+                     <div>
+                         <a href="">
+                             <img src="images/services-kind3.jpg" alt="">
+                             <p class="tittle1">官网定制服务</p>
+                             <p class="tittle2">唇膏&香水专属刻字 定制心意礼</p>
+                             <button type="text" class="bye-btn">查看详情</button>
+                         </a>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="show-love miss">
+            <a href=""><img src="images/banner/banner3.jpg" alt=""></a>
+        </div>
+    </article>
+</section>
+<div class="login-box js-buy-page hidden">
+       <div class="close-buyPage js-close-buyPage">
+           <img src="images/close.png" alt="">
+       </div>
+      <div class="buy-page-box">
+           <div class="bye-purchase-details">
+                <div class="bye-imgs">
+                      <div class="bye-imgs1 js-bye-imgs1"></div>
+                    <div class="bye-imgs2">
+                        <img src="images/buyimgs/middle/middle1.jpg" alt="" class="js-bigImg">
+                    </div>
+                </div>
+
+                <div class="bye-details">
+                    <h5>Advanced Genifique Valueset</h5>
+                    <h5 class="js-detail-tittle">小黑瓶修护套装吧</h5>
+                    <p class="comment">
+                        <img src="images/wujiaoxing.jpg" alt="">
+                        <a href="">120条评论</a>
+                    </p>
+                    <div class="suit-price">
+                             <p>套装</p>
+                             <p class="js-tcPrice">￥760</p>
+                    </div>
+                    <div class="product-handle">
+                          <div class="js-Price">￥760</div>
+                        <select name="" id="select" class="s_center">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <button class="js-Add-shopping-bags">加入购物袋</button>
+                        <button class="js-buyGoods">立即购买</button>
+                    </div>
+                    <p class="synopsis ">产品简介</p>
+                    <p class="cor synopsis ">* 因数量有限，同一个收货地址或者同一个手机号码限购5件，敬请谅解。</p>
+                    <p class="synopsis ">从深层抢人肌底，一瓶改善肌肤干燥、粗糙、细纹三大问题，肌底修护从小黑家族开始</p>
+                    <a href="" class="look-more">查看更多</a>
+                    <div class="collect">
+                        <p><img src="images/collect.png" alt=""><a href="">添加到我的收藏夹</a></p>
+                        <a href="">点击查看产品详情></a>
+                    </div>
+                    
+                </div>
+           </div>
+      </div>
+</div>
+
+<footer></footer>
+
+   </div>
+</body>
+</html>

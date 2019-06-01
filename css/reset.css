@@ -1,0 +1,27 @@
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {
+        margin: 0;
+        padding: 0
+    }
+img{
+    border:none;
+    display: block;
+}
+ul,ol{
+    list-style: none;
+}
+input {
+       padding-top: 0;
+        padding-bottom: 0;
+         font-family: "SimSun","宋体"
+     }
+.clearfix:after{
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+a{
+ text-decoration: none;
+}
+input{outline:none;}
